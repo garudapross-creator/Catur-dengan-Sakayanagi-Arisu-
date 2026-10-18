@@ -1,0 +1,28 @@
+CATUR ARISU - PAKET PASANG
+==========================
+Isi folder ini: index.html (game), manifest.json, sw.js, 3 ikon.
+
+LANGKAH 1 - Taruh di internet (wajib, HTTPS)
+1. Buka https://app.netlify.com/drop (daftar gratis).
+2. Seret SELURUH ISI folder ini (bukan zip-nya) ke kotak yang tersedia.
+3. Catat alamat yang diberikan, misalnya https://nama-acak.netlify.app
+   (Alternatif: GitHub Pages atau Cloudflare Pages, sama saja.)
+4. Buka alamat itu di Chrome HP. Kalau menu muncul "Pasang aplikasi" / "Tambahkan ke layar utama", berarti sudah benar.
+
+LANGKAH 2 - Ubah jadi APK
+1. Buka https://www.pwabuilder.com dan tempel alamat dari langkah 1, lalu tekan Start.
+2. Tunggu pemeriksaan selesai. Pilih "Package for stores", lalu Android.
+3. Isi Package ID (contoh: com.namamu.catur.arisu), nama aplikasi, dan biarkan pilihan lain bawaan.
+4. Pada bagian Signing key pilih "New", lalu tekan Generate.
+5. Unduh zip hasilnya. Di dalamnya ada file .apk (untuk dipasang langsung) dan .aab (untuk Google Play).
+6. SIMPAN file signing key (.keystore) dan kata sandinya. Tanpa itu kamu tidak bisa merilis pembaruan.
+
+LANGKAH 3 - Pasang di HP
+1. Kirim file .apk ke HP, buka, lalu izinkan "Pasang dari sumber tidak dikenal" jika diminta.
+2. Selesai, ikon Arisu muncul di layar utama.
+
+CATATAN
+- Kotak obrolan dengan Arisu TIDAK ikut berfungsi di versi terpasang (fitur itu hanya jalan di dalam halaman Claude). Papan, lawan catur, komentar, dan musik tetap jalan.
+- Aplikasi memuat file dari alamat hosting kamu. Pertama kali butuh internet, setelah itu berjalan offline.
+- Mengubah game: ganti index.html di hosting, lalu naikkan nama cache di sw.js (arisu-v1 jadi arisu-v2) supaya pembaruan terpasang.
+- Google Play butuh akun pengembang (sekitar 25 USD sekali bayar) dan file .aab.
